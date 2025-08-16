@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Industrias Coldesa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
+    <style> 
+        body { font-family: 'Inter', sans-serif; } 
+        .skill-tag {
+            display: inline-block;
+            background-color: #e5e7eb; /* light gray */
+            color: #374151; /* dark gray */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .dark .skill-tag {
+            background-color: #374151; /* dark gray */
+            color: #d1d5db; /* light gray */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+
+    <div class="container mx-auto max-w-4xl p-6 md:p-12">
+        
+        <a href="index.html#experience" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline mb-8">
+            <i class="fas fa-arrow-left mr-2"></i>
+            Back to Portfolio
+        </a>
+
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+            
+            <div class="p-8 border-b border-gray-200 dark:border-gray-700">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center sm:space-x-4">
+                    <img src="./assets/Coldesa.webp" alt="Industrias Coldesa Logo" class="h-16 w-auto mb-4 sm:mb-0">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Production Manager & Mechanical Designer</h1>
+                        <h2 class="text-xl md:text-2xl text-gray-500 dark:text-gray-400">Industrias Coldesa</h2>
+                        <div class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            <span>2021 - 2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-8">
+                <div class="mb-12">
+                     <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Overview</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Industrias Coldesa is a leading engineering firm that provides custom solutions for the vertical transport of freight and people. The company specializes in the end to end design, fabrication, assembly, and maintenance of a wide range of products, including industrial and residential elevators, hydraulic lifts, and industrial carts.
+                    </p>
+                </div>
+
+                <hr class="my-8 border-gray-200 dark:border-gray-700">
+
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Key Responsibilities</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-600 dark:text-gray-300">
+                        <li><b>Operations & Supply Chain Management:</b> Directed end to end plant operations, managing all suppliers of raw materials and services, and supervising the complete lifecycle of project setups from fabrication to assembly.</li>
+                        <li><b>Process & Systems Improvement:</b> Championed and implemented SOLIDWORKS PDM and Office 365 to centralize project data, enhancing information flow and ensuring full traceability across 6 core departments while significantly reducing errors.</li>
+                        <li><b>Team Leadership & Development:</b> Led, trained, and managed a team of 15 electromechanical technicians across manufacturing, installation, and maintenance, fostering a culture of continuous improvement.</li>
+                        <li><b>Design & Process Standardization:</b> Took charge of a company wide initiative to standardize engineering designs and production processes, resulting in improved efficiency, consistency, and quality.</li>
+                    </ul>
+                </div>
+
+                <hr class="my-8 border-gray-200 dark:border-gray-700">
+                
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Key Achievements</h3>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg flex items-center">
+                            <i class="fas fa-industry text-blue-500 text-3xl mr-4 w-12 text-center"></i>
+                            <div>
+                                <p class="font-semibold text-gray-800 dark:text-white">In-House Production Launch</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Established a new production line for aluminium components, achieving a 20% cost and lead time reduction by eliminating outsourcing.</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg flex items-center">
+                            <i class="fas fa-project-diagram text-blue-500 text-3xl mr-4 w-12 text-center"></i>
+                            <div>
+                                <p class="font-semibold text-gray-800 dark:text-white">Digital Systems Implementation</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Deployed SOLIDWORKS PDM & Office 365, enhancing data flow and traceability across 6 core departments and reducing errors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-8 border-gray-200 dark:border-gray-700">
+                
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Skills & Technologies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Production Management</span>
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Process Standardization</span>
+                        <span class="skill-tag">Supply Chain Management</span>
+                        <span class="skill-tag">SOLIDWORKS PDM</span>
+                        <span class="skill-tag">Process Improvement</span>
+                        <span class="skill-tag">Cost Reduction</span>
+                        <span class="skill-tag">Project Management</span>
+                    </div>
+                </div>
+
+                <hr class="my-8 border-gray-200 dark:border-gray-700">
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Project Gallery</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Photos of the production line, process improvements, or final products.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <img src="https://placehold.co/600x400/e2e8f0/4a5568?text=Project+Image+1" alt="Placeholder project image 1" class="rounded-lg shadow-md w-full h-auto">
+                        <img src="https://placehold.co/600x400/e2e8f0/4a5568?text=Project+Image+2" alt="Placeholder project image 2" class="rounded-lg shadow-md w-full h-auto">
+                        <img src="https://placehold.co/600x400/e2e8f0/4a5568?text=Project+Image+3" alt="Placeholder project image 3" class="rounded-lg shadow-md w-full h-auto">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-gray-800 dark:bg-black text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/dalejandrojr" target="_blank" class="hover:text-blue-400 transition duration-300" aria-label="View my LinkedIn profile"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://github.com/REPLACE-WITH-YOUR-USERNAME" target="_blank" class="hover:text-blue-400 transition duration-300" aria-label="View my GitHub profile"><i class="fab fa-github fa-lg"></i></a>
+                <a href="./assets/Alejandro-Jimenez-Resume.pdf" target="_blank" class="hover:text-blue-400 transition duration-300" aria-label="Download my Resume"><i class="fas fa-file-alt fa-lg"></i></a>
+            </div>
+            <p>&copy; 2025 Alejandro Jimenez. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

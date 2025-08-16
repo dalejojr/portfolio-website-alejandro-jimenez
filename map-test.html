@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Map Test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <style>
+        html, body { height: 100%; margin: 0; padding: 0; }
+        #map-container { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+
+    <div id="map-container"></div>
+
+    <script>
+        try {
+            // 1. Create the map and set the view to the center of the world
+            var map = L.map('map-container').setView([20, 0], 2);
+
+            // 2. Add the map image tiles. I am using a different provider just in case.
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            // 3. Add a single test marker in London
+            L.marker([51.5, -0.09]).addTo(map)
+                .bindPopup('If you can see this popup, the map is working!')
+                .openPopup();
+            
+            console.log("SUCCESS: The simple map loaded correctly.");
+
+        } catch (error) {
+            console.error("ERROR: The map failed to load.", error);
+            // If an error happens, display it directly on the screen for us to see.
+            document.getElementById('map-container').innerHTML = 
+                '<div style="padding: 20px; font-family: sans-serif; text-align: center; border: 2px solid red;">' +
+                '<h1>Map Failed to Load</h1>' +
+                '<p>This is the error message the browser reported:</p>' +
+                '<p style="font-weight: bold; color: red;">' + error.message + '</p>' +
+                '<p>Please copy this message and send it to me.</p>' +
+                '</div>';
+        }
+    </script>
+
+</body>
+</html>

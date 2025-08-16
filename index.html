@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alejandro Jimenez | Mechanical Engineer</title>
+    
+    <link rel="preload" href="./assets/design-video.mp4" as="video" type="video/mp4">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -532,19 +535,23 @@
         const leftTimelines = document.querySelectorAll('.timeline-item');
         const timelineEvents = document.querySelectorAll('.timeline-event');
 
+        // Simplified timeline setup
         function setupTimeline() {
-            if (window.innerWidth < 768) {
-                leftTimelines.forEach(el => {
-                    el.classList.remove('flex-row-reverse');
+            if (window.innerWidth >= 768) {
+                // Desktop layout: alternate sides
+                let isRight = true;
+                leftTimelines.forEach(item => {
+                    if (isRight) {
+                        item.classList.remove('flex-row-reverse');
+                    } else {
+                        item.classList.add('flex-row-reverse');
+                    }
+                    isRight = !isRight;
                 });
             } else {
-                 leftTimelines.forEach(el => {
-                    // This logic might need to be adjusted based on the desired desktop layout
-                    // For now, we ensure the 'flex-row-reverse' is present on larger screens if it was removed
-                    if(!el.classList.contains('flex-row-reverse')) {
-                        // This assumes a pattern of reverse, normal, reverse, etc.
-                        // A more robust solution would be needed for dynamic content.
-                    }
+                // Mobile layout: single column
+                leftTimelines.forEach(item => {
+                    item.classList.remove('flex-row-reverse');
                 });
             }
         }

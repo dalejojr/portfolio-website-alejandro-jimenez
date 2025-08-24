@@ -4,23 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience | El talECO Project</title>
+
+    <meta name="description" content="Portfolio page detailing my founder experience at El talECO, a sustainable delivery project, showcasing key achievements and skills.">
+    <meta name="author" content="Alejandro Jimenez">
+    <meta property="og:title" content="Alejandro Jimenez - Founder of El talECO Project">
+    <meta property="og:description" content="A summary of my role and key achievements as the founder of a sustainable startup.">
+    <meta property="og:image" content="./assets/eltaleco-thumbnail.png">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
     <style> 
         body { font-family: 'Inter', sans-serif; } 
         .skill-tag {
             display: inline-block;
-            background-color: #e5e7eb; /* light gray */
-            color: #374151; /* dark gray */
+            background-color: #e5e7eb;
+            color: #374151;
             padding: 0.25rem 0.75rem;
             border-radius: 9999px;
             font-size: 0.875rem;
             font-weight: 500;
         }
         .dark .skill-tag {
-            background-color: #374151; /* dark gray */
-            color: #d1d5db; /* light gray */
+            background-color: #374151;
+            color: #d1d5db;
+        }
+        .white-popup-block {
+            background: #FFF;
+            padding: 20px 30px;
+            text-align: left;
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
         }
     </style>
 </head>
@@ -50,17 +77,19 @@
             </div>
 
             <div class="p-8">
-                <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Sustainable Delivery Concept</h3>
-                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            I founded El talECO, a sustainable grocery delivery concept aimed at reducing plastic waste through a closed-loop system using reusable bags. My goal was to create an eco-friendly alternative for consumers and build a brand from the ground up.
-                        </p>
-                    </div>
-                    <video class="w-full h-auto rounded-lg shadow-md" controls poster="https://placehold.co/600x400?text=Video+Poster">
+
+                <div class="mb-12">
+                    <video class="w-full h-auto rounded-lg shadow-md" controls poster="./assets/eltaleco-thumbnail.png">
                         <source src="./assets/el taleco.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                </div>
+
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Sustainable Delivery Concept</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        I founded El talECO, a sustainable grocery delivery concept aimed at reducing plastic waste through a closed-loop system using reusable bags. My goal was to create an eco-friendly alternative for consumers and build a brand from the ground up, managing everything from product design to business strategy.
+                    </p>
                 </div>
                 
                 <hr class="my-8 border-gray-200 dark:border-gray-700">
@@ -79,19 +108,26 @@
                 
                 <div class="mb-12">
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Key Achievements</h3>
-                    <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="grid md:grid-cols-3 gap-6">
                         <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg flex items-center">
-                            <i class="fas fa-award text-blue-500 text-3xl mr-4"></i>
+                            <i class="fas fa-award text-blue-500 text-3xl mr-4 w-12 text-center"></i>
                             <div>
-                                <p class="font-semibold text-gray-800 dark:text-white">Winner, Capital Semilla Medellín 2020</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Secured funding and formal entrepreneurship training.</p>
+                                <p class="font-semibold text-gray-800 dark:text-white">Winner, Capital Semilla</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Secured seed funding and formal entrepreneurship training after winning a competitive startup grant.</p>
                             </div>
                         </div>
                         <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg flex items-center">
-                            <i class="fas fa-chart-line text-blue-500 text-3xl mr-4"></i>
+                            <i class="fas fa-lightbulb text-blue-500 text-3xl mr-4 w-12 text-center"></i>
                             <div>
-                                <p class="font-semibold text-gray-800 dark:text-white">Over 1,000 Units Sold</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Achieved significant sales in the initial launch phase.</p>
+                                <p class="font-semibold text-gray-800 dark:text-white">Brand Creation</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Developed the entire brand from scratch, including identity, marketing strategy, and product design.</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg flex items-center">
+                            <i class="fas fa-chart-line text-blue-500 text-3xl mr-4 w-12 text-center"></i>
+                            <div>
+                                <p class="font-semibold text-gray-800 dark:text-white">Successful Launch</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Achieved over 1,000 units sold during the initial launch phase, validating the business concept.</p>
                             </div>
                         </div>
                     </div>
@@ -107,7 +143,7 @@
                         <span class="skill-tag">Brand Management</span>
                         <span class="skill-tag">Business Strategy</span>
                         <span class="skill-tag">Market Research</span>
-                        <span class="skill-tag">Logistics</span>
+                        <span class="skill-tag">Logistics & Operations</span>
                     </div>
                 </div>
 
@@ -115,20 +151,51 @@
                 
                 <div>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Project Gallery</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <img src="./assets/eltaleco1.jpg" alt="El talECO project photo 1" class="rounded-lg shadow-md w-full h-auto">
-                        
-                        <img src="./assets/eltaleco2.jpg" alt="El talECO project photo 2" class="rounded-lg shadow-md w-full h-auto">
-
-                        <img src="./assets/eltaleco3.jpg" alt="El talECO project photo 3" class="rounded-lg shadow-md w-full h-auto">
-
-                        <img src="./assets/eltaleco4.jpg" alt="El talECO project photo 4" class="rounded-lg shadow-md w-full h-auto">
+                    <div class="gallery">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A collection of photos from the project. Click any item to view it larger.</p>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                            <a href="./assets/eltaleco1.jpg" class="gallery-item"><img src="./assets/eltaleco1.jpg" alt="El talECO project photo 1" class="rounded-lg shadow-md w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity"></a>
+                            <a href="./assets/eltaleco2.jpg" class="gallery-item"><img src="./assets/eltaleco2.jpg" alt="El talECO project photo 2" class="rounded-lg shadow-md w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity"></a>
+                            <a href="./assets/eltaleco3.jpg" class="gallery-item"><img src="./assets/eltaleco3.jpg" alt="El talECO project photo 3" class="rounded-lg shadow-md w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity"></a>
+                            <a href="./assets/eltaleco4.jpg" class="gallery-item"><img src="./assets/eltaleco4.jpg" alt="El talECO project photo 4" class="rounded-lg shadow-md w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity"></a>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+    
+    <footer class="bg-gray-800 dark:bg-black text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/dalejandrojr" target="_blank" class="hover:text-blue-400 transition duration-300" aria-label="View my LinkedIn profile"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://github.com/dalejandrojr" target="_blank" class="hover:text-blue-400 transition duration-300" aria-label="View my GitHub profile"><i class="fab fa-github fa-lg"></i></a>
+                <a href="./assets/Alejandro-Jimenez-Resume.pdf" target="_blank" class="hover:text-blue-400 transition duration-300" aria-label="Download my Resume"><i class="fas fa-file-alt fa-lg"></i></a>
+            </div>
+            <p>&copy; 2025 Alejandro Jimenez. All Rights Reserved.</p>
+        </div>
+    </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    
+    <script>
+    $(document).ready(function() {
+        $('.gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            mainClass: 'mfp-with-zoom',
+            zoom: {
+                enabled: true,
+                duration: 300,
+                easing: 'ease-in-out'
+            }
+        });
+    });
+    </script>
 </body>
 </html>
